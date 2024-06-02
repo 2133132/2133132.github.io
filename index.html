@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>酷東西購物</title>
+    <meta name="author" content="酷東西">
+    <link rel="stylesheet" href="style.css">
+    <script src="product.js"></script>
+</head>
+<body>
+    <button onclick="showCart();">購物車總和</button>
+    <button onclick="clearCart();">清空購物車</button>
+    
+    <div class="product_box">
+        <img src="product_image/love.jpg" alt="Love">
+        <script>
+            document.write(`
+            ${love.name}</br>
+            ${love.information}</br>
+            $ ${love.price}
+            `);
+        </script>    
+        <button onclick="updateCart('LoveNum', love.price);"><div class="shopping_button">加入購物車</div></button>
+    </div>
+    
+    <div class="product_box">
+        <img src="product_image/wisdom.jpg" alt="Wisdom">
+        <script>
+            document.write(`
+            ${wisdom.name}</br>
+            ${wisdom.information}</br>
+            $ ${wisdom.price}
+            `);
+        </script>    
+        <button onclick="updateCart('WisdomNum', wisdom.price);"><div class="shopping_button">加入購物車</div></button>
+    </div>
+    
+    <div class="product_box">
+        <img src="product_image/courage.jpg" alt="Courage">
+        <script>
+            document.write(`
+            ${courage.name}</br>
+            ${courage.information}</br>
+            $ ${courage.price}
+            `);
+        </script>    
+        <button onclick="updateCart('CourageNum', courage.price);"><div class="shopping_button">加入購物車</div></button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
