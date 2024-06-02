@@ -51,3 +51,4 @@ function clearCart() {
     console.log('已清空購物車');
     showCart();
 }
+

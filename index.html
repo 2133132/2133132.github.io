@@ -5,48 +5,83 @@
     <title>酷東西購物</title>
     <meta name="author" content="酷東西">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="general.css">
     <script src="product.js"></script>
 </head>
 <body>
-    <button onclick="showCart();">購物車總和</button>
-    <button onclick="clearCart();">清空購物車</button>
-    
-    <div class="product_box">
-        <img src="product_image/love.jpg" alt="Love">
-        <script>
-            document.write(`
-            ${love.name}</br>
-            ${love.information}</br>
-            $ ${love.price}
-            `);
-        </script>    
-        <button onclick="updateCart('LoveNum', love.price);"><div class="shopping_button">加入購物車</div></button>
+    <div class="head">
+        <button onclick="showCart();">購物車總和</button>
+        <button onclick="clearCart();">清空購物車</button>
     </div>
-    
-    <div class="product_box">
-        <img src="product_image/wisdom.jpg" alt="Wisdom">
-        <script>
-            document.write(`
-            ${wisdom.name}</br>
-            ${wisdom.information}</br>
-            $ ${wisdom.price}
-            `);
-        </script>    
-        <button onclick="updateCart('WisdomNum', wisdom.price);"><div class="shopping_button">加入購物車</div></button>
+    <div class="product-grid">
+        <div class="product_box">
+            <img src="product_image/love.jpg" alt="Love">
+            <div class="product_information">
+                <script >
+                    document.write(`
+                    <div class"product_name">${love.name}</div></br>
+                    ${love.information}</br>
+                    `);
+                </script>
+                <div class="product-price-row">
+                    <script >
+                        document.write(`$ ${love.price}`);
+                    </script>
+                    <button onclick="updateCart('LoveNum', love.price);" ><img class="shopping_button" src="product_image\cart.png"></button>
+                </div>
+            </div>
+        </div>
+        <div class="product_box">
+            <img src="product_image/wisdom.jpg" alt="Wisdom">
+            <div class="product_information">
+                <script>
+                    document.write(`
+                    <div class"product_name">${wisdom.name}</div></br>
+                    ${wisdom.information}</br>
+                    `);
+                </script>   
+                <div class="product-price-row">
+                    <script >
+                        document.write(`$ ${wisdom.price}`);
+                    </script> 
+                    <button onclick="updateCart('WisdomNum', wisdom.price);"><img class="shopping_button" src="product_image\cart.png"></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product_box">
+            <img src="product_image/courage.jpg" alt="Courage">
+            <div class="product_information">
+                <script>
+                    document.write(`
+                    <div class"product_name">${courage.name}</div></br>
+                    ${courage.information}</br>
+                    `);
+                </script>   
+                <div class="product-price-row">
+                    <script >
+                        document.write(`$ ${love.price}`);
+                    </script> 
+                    <button onclick="updateCart('CourageNum', courage.price);"><img class="shopping_button" src="product_image\cart.png"></button>
+                </div>
+            </div>
+        </div>
     </div>
+    </br>
+
     
-    <div class="product_box">
-        <img src="product_image/courage.jpg" alt="Courage">
-        <script>
-            document.write(`
-            ${courage.name}</br>
-            ${courage.information}</br>
-            $ ${courage.price}
-            `);
-        </script>    
-        <button onclick="updateCart('CourageNum', courage.price);"><div class="shopping_button">加入購物車</div></button>
-    </div>
-    
+
     <script src="script.js"></script>
+    <p class="cart"></p>
+    <script>
+        function showCart(){
+            document.querySelector('.cart').innerHTML=`
+                目前商品數 : ${cart.ProductNum}</br>
+                愛情: ${cart.LoveNum}</br>
+                智慧: ${cart.WisdomNum}</br>
+                勇氣: ${cart.CourageNum}</br>
+                目前購物車總額 : $${cart.totalprice}`
+        }
+    </script>
 </body>
 </html>

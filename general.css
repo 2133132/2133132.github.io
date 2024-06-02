@@ -1,0 +1,29 @@
+.head{
+    position: fixed;
+    background-color: rgb(255, 102, 0);
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    width: 200px;
+    height: 150px;
+    display: block;
+    margin-top:50px;
+}
+
+p{
+    font-size: 25px;
+    display: inline-block;
+    margin-right:10px;
+}
+
+button{
+    font-size:25px;
+    margin-right:10px;
+}
+
