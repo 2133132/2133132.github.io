@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>酷東西購物</title>
+        <meta charset="utf-8">
+        <meta name="author" content="酷東西">
+        <link rel="stylesheet" href="style.css">
+        <script src="product.js"></script>
+    </head>
+    <body>
+        <button onclick="
+            showCart();
+            ">購物車總和</button>
+        <button onclick="
+            cart.totalprice=0;
+            cart.ProductNum=0;
+            cart.LoveNum=0;
+            cart.WisdomNum=0;
+            cart.CourageNum=0;
+            console.log('已清空購物車');
+            showCart();
+        ">清空購物車</button>
+        <div class="product_box">
+            <img src="C:\Users\user\Desktop\shopping_website\product_image\love.jpg">
+            <script>
+                document.write(`
+                ${love.name}</br>
+                ${love.information}</br>
+                $ ${love.price}
+                `);
+            </script>    
+            <button onclick="
+                cart.LoveNum++;
+                cart.totalprice+=love.price;
+                showCart();
+            " ><div class="shopping_button">加入購物車</div></button>
+        </div>
+        <div class="product_box">
+            <img src="C:\Users\user\Desktop\shopping_website\product_image\wisdom.jpg">
+            <script>
+                document.write(`
+                ${wisdom.name}</br>
+                ${wisdom.information}</br>
+                $ ${wisdom.price}
+                `);
+            </script>    
+            <button onclick="
+                cart.WisdomNum++;
+                cart.totalprice+=wisdom.price;
+                showCart();
+            " ><div class="shopping_button">加入購物車</div></button>
+        </div>
+        <div class="product_box">
+            <img src="C:\Users\user\Desktop\shopping_website\product_image\courage.jpg">
+            <script>
+                document.write(`
+                ${courage.name}</br>
+                ${courage.information}</br>
+                $ ${courage.price}
+                `);
+            </script>    
+            <button onclick="
+                cart.CourageNum++;
+                cart.totalprice+=courage.price;
+                showCart();
+            " ><div class="shopping_button">加入購物車</div></button>
+        </div>
+        <script src="scirpt.js"></script>
+    </body>
+</html>
