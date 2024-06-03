@@ -7,15 +7,30 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="general.css">
     <script src="product.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="head">
-        <button onclick="showCart();">購物車總和</button>
-        <button onclick="clearCart();">清空購物車</button>
+        <div class="header-container">
+            <div class="header-left">
+                <a href="index.html" ><img src="product_image/cool.jpg" class="logo"></a>
+            </div>
+            <div class="header-right">
+                <div class="search">
+                    <input class="search-input" placeholder="這是假的，沒作用只是美觀">
+                    <button class="search-button">
+                        <img class="search-icon" src="product_image/search.jpg">
+                    </button>
+                </div>
+                <a href="check.html"><img src="product_image/cart.png"class="shopping_cart">
+                <p class="cart_num">0</p>
+                </a>
+            </div>
+        </div>
     </div>
     <div class="product-grid">
         <div class="product_box">
-            <img src="product_image/love.jpg" alt="Love">
+            <img src="product_image/love.jpg" class="product_img" alt="Love">
             <div class="product_information">
                 <script >
                     document.write(`
@@ -32,7 +47,7 @@
             </div>
         </div>
         <div class="product_box">
-            <img src="product_image/wisdom.jpg" alt="Wisdom">
+            <img src="product_image/wisdom.jpg" class="product_img" alt="Wisdom">
             <div class="product_information">
                 <script>
                     document.write(`
@@ -50,7 +65,7 @@
         </div>
         
         <div class="product_box">
-            <img src="product_image/courage.jpg" alt="Courage">
+            <img src="product_image/courage.jpg" class="product_img" alt="Courage">
             <div class="product_information">
                 <script>
                     document.write(`
@@ -72,16 +87,7 @@
     
 
     <script src="script.js"></script>
-    <p class="cart"></p>
-    <script>
-        function showCart(){
-            document.querySelector('.cart').innerHTML=`
-                目前商品數 : ${cart.ProductNum}</br>
-                愛情: ${cart.LoveNum}</br>
-                智慧: ${cart.WisdomNum}</br>
-                勇氣: ${cart.CourageNum}</br>
-                目前購物車總額 : $${cart.totalprice}`
-        }
-    </script>
+    
+    
 </body>
 </html>

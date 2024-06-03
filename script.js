@@ -24,6 +24,7 @@ function showCart() {
     console.log(`愛情的產品數量: ${cart.LoveNum}`);
     console.log(`智慧的產品數量: ${cart.WisdomNum}`);
     console.log(`勇氣的產品數量: ${cart.CourageNum}`);
+    document.querySelector('.cart_num').innerText = `${cart.ProductNum}`;
 }
 
 // 在頁面加載時保持購物車狀態
@@ -52,3 +53,11 @@ function clearCart() {
     showCart();
 }
 
+function showCart(){
+    document.querySelector('.cart').innerHTML=`
+        目前商品數 : ${cart.ProductNum}</br>
+        愛情: ${cart.LoveNum}</br>
+        智慧: ${cart.WisdomNum}</br>
+        勇氣: ${cart.CourageNum}</br>
+        目前購物車總額 : $${cart.totalprice}`
+}

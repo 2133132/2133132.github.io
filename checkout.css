@@ -1,0 +1,91 @@
+.checkout-row {
+    display: flex;
+    align-items: start;
+    margin-bottom: 60px;
+    unicode-bidi: isolate;
+}
+
+* {
+    font-family: 'Noto Serif TC', serif;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+hr {
+    display: block;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    unicode-bidi: isolate;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.checkout-right {
+    background-color: white;
+    flex: 1;
+    border-radius: 15px;
+    padding: 20px;
+    min-width: 200px;
+}
+
+.checkout-items {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.items-price {
+    margin-top: 15px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delivery-price {
+    margin-top: 15px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-summary-hr {
+    margin: 20px 0px;
+}
+
+.total-price {
+    font-size: 20px;
+    font-weight: 900;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-button {
+    margin-top: 40px;
+    font-size: 20px;
+    width: 100%;
+    background-color: #f86c45;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 8px 0px;
+    margin-bottom: 10px;
+}

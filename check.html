@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>購物車</title>
+    <meta name="author" content="酷東西">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="checkout.css">
+    <script src="product.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="head">
+        <div class="header-container">
+            <div class="header-left">
+                <a href="index.html" ><img src="product_image/cool.jpg" class="logo"></a>
+            </div>
+            <div class="header-right">
+                <div class="search">
+                    <input class="search-input" placeholder="這是假的，沒作用只是美觀">
+                    <button class="search-button">
+                        <img class="search-icon" src="product_image/search.jpg">
+                    </button>
+                </div>
+                <a href="check.html"><img src="product_image/cart.png"class="shopping_cart">
+                <p class="cart_num">0</p>
+                </a>
+            </div>
+        </div>
+    </div>
+        
+    <div class="checkout-row">
+            <div class="checkout-right">
+                <h2 class="checkout-summary">訂單總結</h2>
+                <p class="checkout-items"></p>
+                    <p class="cart-num"></p>
+                <p class="items-price">
+                    <span>金額 : </span>
+                    <span class="cart-price"> </span>
+                </p>
+                <p class="cart"></p>
+                <p class="delivery-price">
+                    <span>運費 : </span>
+                    <span>$800</span>
+                </p>
+                <hr class="checkout-summary-hr">
+                <p class="total-price">
+                    <span>總額 : </span>
+                    <span>$5800</span>
+                </p>
+                <button class="checkout-button">結帳(沒用)</button>
+            </div>
+    </div>
+    <script>
+        function showCart() {
+            document.querySelector('.cart-num').innerText = `總共 ${cart.ProductNum} 樣商品`;
+
+            document.querySelector('.cart-price').innerText = `$ ${cart.totalprice}`;
+
+            document.querySelector('.cart').innerHTML = `
+                愛情 X${cart.LoveNum}</br>
+                智慧 X${cart.WisdomNum}</br>
+                勇氣 X${cart.CourageNum}</br>`;
+            }
+            window.onload = function() {
+                loadCart();
+                showCart();
+            };
+    </script>
+</body>
+</html>

@@ -37,6 +37,7 @@ function showCart() {
     console.log(`智慧: ${cart.WisdomNum}`);
     console.log(`勇氣: ${cart.CourageNum}`);
     console.log(`目前購物車總額 : $${cart.totalprice}`);
+    document.querySelector('.cart_num').innerText = `${cart.ProductNum}`;
 }
 
 function updateCart(product, price) {
