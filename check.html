@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-TW" >
 <head>
     <meta charset="UTF-8">
     <title>購物車</title>
@@ -42,14 +42,14 @@
                 <p class="cart"></p>
                 <p class="delivery-price">
                     <span>運費 : </span>
-                    <span>$800</span>
+                    <span>$0</span>
                 </p>
                 <hr class="checkout-summary-hr">
                 <p class="total-price">
                     <span>總額 : </span>
-                    <span>$5800</span>
+                    <span class="cart-price"> </span>
                 </p>
-                <button class="checkout-button">結帳(沒用)</button>
+                <button onclick="clearCart();" class="checkout-button" >結帳(沒用，但會清空購物車)</button>
             </div>
     </div>
     <script>

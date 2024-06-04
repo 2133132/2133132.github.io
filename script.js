@@ -3,7 +3,8 @@ const cart = {
     ProductNum: 0,
     LoveNum: 0,
     WisdomNum: 0,
-    CourageNum: 0
+    CourageNum: 0,
+    
 };
 
 function saveCart() {
