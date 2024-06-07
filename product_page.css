@@ -1,0 +1,26 @@
+.name{
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 0;
+    max-height: 48px;
+    max-width: 665px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    vertical-align: sub;
+}
+
+.product-img{
+    display: block;
+    object-fit: contain;
+    object-position: center;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
